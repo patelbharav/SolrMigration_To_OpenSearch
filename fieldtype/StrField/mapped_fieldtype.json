@@ -1,5 +1,0 @@
-{
-    "string_field": {
-        "type": "keyword"
-    }
-}
