@@ -1,0 +1,9 @@
+{
+  "standard-default": {
+    "type": "asciifolding"
+  },
+  "standard": {
+    "type": "asciifolding",
+    "preserve_original": false
+  }
+}

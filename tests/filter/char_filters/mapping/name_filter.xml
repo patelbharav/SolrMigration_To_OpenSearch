@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="mapping" class="solr.TextField">
+        <analyzer>
+            <charFilter name="mapping" mapping="mapping-FoldToASCII.txt"/>
+        </analyzer>
+    </fieldType>
+</schema>

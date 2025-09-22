@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="basic_strip" class="solr.TextField">
+        <analyzer>
+            <charFilter name="htmlStrip"/>
+        </analyzer>
+    </fieldType>
+</schema>

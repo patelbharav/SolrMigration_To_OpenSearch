@@ -1,0 +1,9 @@
+{
+    "standard-default": {
+      "type": "pattern_replace",
+      "pattern": "cat",
+      "replacement": "dog",
+      "all": true
+    }
+  }
+  

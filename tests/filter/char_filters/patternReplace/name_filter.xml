@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="pattern" class="solr.TextField">
+        <analyzer>
+            <charFilter name="patternReplace"
+             pattern="([nN][oO]\.)\s*(\d+)" replacement="$1$2"/>
+        </analyzer>
+    </fieldType>
+</schema>

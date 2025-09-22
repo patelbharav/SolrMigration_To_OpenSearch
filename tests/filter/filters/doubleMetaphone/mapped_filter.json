@@ -1,0 +1,6 @@
+{
+  "standard-default": {
+    "type": "phonetic",
+    "encoder": "double_metaphone"
+  }
+}

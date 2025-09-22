@@ -1,0 +1,6 @@
+{
+    "pattern": {
+        "type": "pattern_replace",
+        "pattern": "([nN][oO]\\.)\\s*(\\d+)"
+    }
+}

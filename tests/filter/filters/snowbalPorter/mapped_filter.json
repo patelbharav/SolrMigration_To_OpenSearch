@@ -1,0 +1,11 @@
+{
+    "standard-default": {
+      "type": "snowball",
+      "language": "English"
+    },
+    "standard": {
+      "type": "snowball",
+      "language": "Arabic"
+    }
+  }
+  

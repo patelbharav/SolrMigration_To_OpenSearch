@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="standard-default"> class="solr.TextField"
+        <analyzer>
+                <filter name="asciiFolding"/>
+        </analyzer>
+    </fieldType>
+
+    <fieldType name="standard" class="solr.TextField">
+        <analyzer>
+                <filter name="asciiFolding" preserveOriginal="false" />
+        </analyzer>
+    </fieldType>
+</schema>

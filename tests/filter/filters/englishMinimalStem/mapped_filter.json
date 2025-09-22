@@ -1,0 +1,10 @@
+{
+    "standard-default": {
+        "type": "stemmer",
+        "language": "english"
+    },
+    "standard-default-Arabic": {
+        "type": "stemmer",
+        "language": "arabic"
+    }
+}

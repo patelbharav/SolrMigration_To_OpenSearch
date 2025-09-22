@@ -1,0 +1,21 @@
+{
+    "standard-default": {
+      "type": "shingle",
+      "min_shingle_size": 2,
+      "max_shingle_size": 2,
+      "output_unigrams": true,
+      "output_unigrams_if_no_shingles": false,
+      "token_separator": " ",
+      "filler_token": "_"
+    },
+    "standard": {
+      "type": "shingle",
+      "min_shingle_size": 3,
+      "max_shingle_size": 4,
+      "output_unigrams": false,
+      "output_unigrams_if_no_shingles": true,
+      "token_separator": "-",
+      "filler_token": "-"
+    }
+  }
+  
