@@ -1,0 +1,71 @@
+{
+    "title": {
+        "type": "text",
+        "index": true,
+        "store": true,
+        "required": true,
+        "multi": true
+    },
+    "id": {
+        "type": "keyword",
+        "index": true,
+        "store": true,
+        "required": true,
+        "doc_values": true
+    },
+    "age": {
+        "type": "integer",
+        "index": true,
+        "store": true,
+        "doc_values": true
+    },
+    "price": {
+        "type": "float",
+        "index": true,
+        "store": true
+    },
+    "quantity": {
+        "type": "long",
+        "index": true,
+        "store": true
+    },
+    "rating": {
+        "type": "double",
+        "index": true,
+        "store": true
+    },
+    "created_date": {
+        "type": "date",
+        "index": true,
+        "store": true,
+        "doc_values": true
+    },
+    "is_active": {
+        "type": "boolean",
+        "index": true,
+        "store": true
+    },
+    "file_content": {
+        "type": "binary",
+        "store": true
+    },
+    "metadata": {
+        "type": "nested"
+    },
+    "location": {
+        "type": "xy_type",
+        "index": true,
+        "store": true
+    },
+    "area": {
+        "type": "geo_shape"
+    },
+    "full_text": {
+        "type": "text",
+        "index": true,
+        "store": true,
+        "doc_values": true,
+        "multi": true,
+        "required": true
+    }
+}

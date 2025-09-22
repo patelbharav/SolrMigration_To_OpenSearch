@@ -1,0 +1,5 @@
+{
+    "spatial_rpt": {
+        "type": "geo_shape"
+    }
+}

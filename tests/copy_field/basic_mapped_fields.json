@@ -1,0 +1,13 @@
+{
+    "title": {
+        "type": "text",
+        "index": true,
+        "store": true,
+        "copy_to": "title_search"
+    },
+    "title_search": {
+        "type": "text",
+        "index": true,
+        "store": true
+    }
+}

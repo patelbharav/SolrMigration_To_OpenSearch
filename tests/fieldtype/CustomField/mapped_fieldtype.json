@@ -1,0 +1,46 @@
+{
+  "analyzer": {
+    "text_field": {
+      "tokenizer": "standard81920306",
+      "filter": [
+        "stop56825018",
+        "lowercase12300404"
+      ],
+      "type": "custom"
+    },
+    "text_field_index": {
+      "tokenizer": "standard81920306",
+      "filter": [
+        "stop56825018",
+        "lowercase12300404"
+      ],
+      "type": "custom"
+    },
+    "text_field_query": {
+      "tokenizer": "standard81920306",
+      "filter": [
+        "stop56825018",
+        "lowercase12300404"
+      ],
+      "type": "custom"
+    }
+  },
+  "tokenizer": {
+    "standard81920306": {
+      "max_token_length": 255,
+      "type": "standard"
+    }
+  },
+  "filter": {
+    "stop56825018": {
+      "ignore_case": "true",
+      "stopwords": [
+
+      ],
+      "type": "stop"
+    },
+    "lowercase12300404": {
+      "type": "lowercase"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<schema>
+    <fieldType name="text_field" class="solr.TextField" >
+        <analyzer>
+            <tokenizer name="standard"/>
+            <filter name="stop" ignoreCase="true" />
+            <filter name="lowercase"/>
+        </analyzer>
+        <analyzer type="index">
+            <tokenizer name="standard"/>
+            <filter name="stop" ignoreCase="true" />
+            <filter name="lowercase"/>
+        </analyzer>
+        <analyzer type="query">
+            <tokenizer name="standard"/>
+            <filter name="stop" ignoreCase="true"/>
+            <filter name="lowercase"/>
+        </analyzer>
+    </fieldType>
+
+</schema>
