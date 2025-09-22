@@ -1,0 +1,34 @@
+{
+    "*_txt": {
+        "match": "*_txt",
+        "mapping": {
+            "type": "text",
+            "index": true,
+            "store": true
+        }
+    },
+    "*_i": {
+        "match": "*_i",
+        "mapping": {
+            "type": "integer",
+            "index": true,
+            "store": true
+        }
+    },
+    "*_s": {
+        "match": "*_s",
+        "mapping": {
+            "type": "keyword",
+            "index": true,
+            "store": true
+        }
+    },
+    "*_dt": {
+        "match": "*_dt",
+        "mapping": {
+            "type": "date",
+            "index": true,
+            "store": true
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "standard-default": {
+      "type": "fingerprint",
+      "max_output_size": 255,
+      "separator": " "
+    },
+    "standard": {
+      "type": "fingerprint",
+      "max_output_size": 100,
+      "separator": "_"
+    }
+  }
+  

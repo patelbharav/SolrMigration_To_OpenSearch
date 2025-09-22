@@ -1,0 +1,10 @@
+{
+    "standard-default": {
+        "type": "keep",
+        "keep_words_case": false
+    },
+    "standard": {
+        "type": "keep",
+        "keep_words_case": true
+    }
+}

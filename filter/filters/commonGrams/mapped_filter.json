@@ -1,0 +1,14 @@
+{
+  "standard-default": {
+      "type": "common_grams",
+      "ignore_case": false,
+      "query_mode": false,
+      "common_words": ["line1", "line2", "line3"]
+  },
+  "standard": {
+      "type": "common_grams",
+      "ignore_case": true,
+      "query_mode": false,
+      "common_words": ["line1", "line2", "line3"]
+  }
+}

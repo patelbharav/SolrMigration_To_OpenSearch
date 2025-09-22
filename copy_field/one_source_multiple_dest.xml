@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <copyField source="content" dest="search_field"/>
+    <copyField source="content" dest="content_exact"/>
+    <copyField source="content" dest="all_text"/>
+</schema>

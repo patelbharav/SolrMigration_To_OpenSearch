@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="long_field" class="solr.LongPointField" />
+</schema>

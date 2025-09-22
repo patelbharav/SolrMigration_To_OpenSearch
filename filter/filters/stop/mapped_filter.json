@@ -1,0 +1,12 @@
+{
+    "standard-default": {
+        "type": "stop",
+        "ignore_case": false,
+        "stopwords": ["line1", "line2", "line3"]
+    },
+    "standard": {
+        "type": "stop",
+        "ignore_case": true,
+        "stopwords": ["line1", "line2", "line3"]
+    }
+}

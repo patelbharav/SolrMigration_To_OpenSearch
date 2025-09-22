@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <copyField source="price" dest="all_numbers"/>
+    <copyField source="quantity" dest="all_numbers"/>
+    <copyField source="stock" dest="all_numbers"/>
+</schema>

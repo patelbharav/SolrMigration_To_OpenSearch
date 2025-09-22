@@ -1,0 +1,13 @@
+{
+    "standard-default": {
+      "type": "synonym",
+      "expand": true,
+      "lenient": true
+    },
+    "standard": {
+      "type": "synonym",
+      "expand": false,
+      "lenient": true
+    }
+  }
+  

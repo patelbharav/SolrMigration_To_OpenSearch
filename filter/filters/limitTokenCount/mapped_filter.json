@@ -1,0 +1,13 @@
+{
+    "standard-default": {
+      "type": "limit",
+      "max_token_count": 10,
+      "consume_all_tokens": false
+    },
+    "standard": {
+      "type": "limit",
+      "max_token_count": 10,
+      "consume_all_tokens": true
+    }
+  }
+  
