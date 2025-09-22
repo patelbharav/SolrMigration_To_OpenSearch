@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Summary Results</title>
+</head>
+<style>
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  margin:15px;
+}
+thead {
+  background-color: #96D4D4;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+th {
+  background-color: #96D4D4;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+td {
+  background-color: #D6EEEE;
+    text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+</style>
+<body>
+  <table title="Summary Results">
+    <thead>
+      <tr>
+        <th colspan="4">Summary Results</th>
+      </tr>
+    </thead>
+    <tr>
+      <th>Type</th>
+      <th>Total</th>
+      <th>Mapped</th>
+      <th>Error</th>
+    </tr>
+    <tr>
+      <td>FieldsType_results</td>
+      <td>{{summary.field_types.total}}</td>
+      <td>{{summary.field_types.mapped}}</td>
+      <td>{{summary.field_types.error}}</td>
+    </tr>
+    <tr>
+      <td>Fields_results</td>
+      <td>{{summary.fields.total}}</td>
+      <td>{{summary.fields.mapped}}</td>
+      <td>{{summary.fields.error}}</td>
+    </tr>
+    <tr>
+      <td>Dynamic Fields</td>
+      <td>{{summary.dynamic_fields.total}}</td>
+      <td>{{summary.dynamic_fields.mapped}}</td>
+      <td>{{summary.dynamic_fields.error}}</td>
+    </tr>
+    <tr>
+      <td>CopyFields</td>
+      <td>{{summary.copy_fields.total}}</td>
+      <td>{{summary.copy_fields.mapped}}</td>
+      <td>{{summary.copy_fields.error}}</td>
+    </tr>
+  </table>
+  <table class="field_types_results">
+    <thead>
+      <tr>
+        <th colspan="7">FieldType Mapping Results</th>
+      </tr>
+    </thead>
+    <tr>
+      <th>FieldTypeName</th>
+      <th>TokenizerName</th>
+      <th>Reason</th>
+      <th>Filter</th>
+      <th>Reason</th>
+      <th>CharFilter</th>
+      <th>Reason</th>
+    </tr>
+    {% for field_type_exception in summary.field_types.exception_list %}
+    <tr>
+      <td>{{ field_type_exception.name }}</td>
+      {% if field_type_exception.analyzer_exception.tokenizer_exception != None %}
+      <td>{{ field_type_exception.analyzer_exception.tokenizer_exception.name }}</td>
+      <td>{{ field_type_exception.analyzer_exception.tokenizer_exception.reason }}</td>
+      {% else %}
+      <td>"NA"</td>
+      <td>"NA"</td>
+      {% endif %}
+      {% if field_type_exception.analyzer_exception.filter_exception != None %}
+      <td>{{ field_type_exception.analyzer_exception.filter_exception.name }}</td>
+      <td>{{ field_type_exception.analyzer_exception.filter_exception.reason }}</td>
+      {% else %}
+      <td>"NA"</td>
+      <td>"NA"</td>
+      {% endif %}
+      {% if field_type_exception.analyzer_exception.char_filter_exception != None %}
+      <td>{{ field_type_exception.analyzer_exception.char_filter_exception.name }}</td>
+      <td>{{ field_type_exception.analyzer_exception.char_filter_exception.reason }}</td>
+      {% else %}
+      <td>"NA"</td>
+      <td>"NA"</td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </table>
+  <table class="fields_results">
+    <thead>
+      <tr>
+        <th colspan="3">Fields Mapping Results</th>
+      </tr>
+    </thead>
+    <tr>
+      <th>FieldName</th>
+      <th>FieldTypeName</th>
+      <th>Reason</th>
+    </tr>
+    {% for field_exception in summary.fields.exception_list %}
+    <tr>
+      <td>{{ field_exception.name }}</td>
+      <td>{{ field_exception.field_type }}</td>
+      <td>{{ field_exception.reason}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3">Dynamic Fields Mapping  Results</th>
+      </tr>
+    </thead>
+    <tr>
+      <th>DynamicFieldName</th>
+      <th>FieldTypeName</th>
+      <th>Reason</th>
+    </tr>
+    {% for dynamic_field_exception in summary.dynamic_fields.exception_list %}
+    <tr>
+      <td>{{ dynamic_field_exception.name }}</td>
+      <td>{{ dynamic_field_exception.field_type}}</td>
+      <td>{{ dynamic_field_exception.reason}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3">Copy Fields Mapping Results</th>
+      </tr>
+    </thead>
+    <tr>
+      <th>CopyFieldName</th>
+      <th>CopyFieldTypeName</th>
+      <th>Reason</th>
+    </tr>
+    {% for copy_field_exception in summary.copy_fields.exception_list %}
+    <tr>
+      <td>{{ copy_field_exception.name }}</td>
+      <td>{{ copy_field_exception.reason}}</td>
+      <td>{{ copy_field_exception.src_field}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

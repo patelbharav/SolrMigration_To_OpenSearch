@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Data Migration Report</title>
+</head>
+<style>
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  margin:15px;
+}
+thead {
+  background-color: #96D4D4;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+th {
+  background-color: #96D4D4;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+td {
+  background-color: #D6EEEE;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+</style>
+<body>
+  <div class="header">
+    <h1>Solr to OpenSearch Data Migration Report</h1>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">Data Migration Summary</th>
+      </tr>
+    </thead>
+    <tr>
+      <th>Metric</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>Total Documents in Solr</td>
+      <td>{{ data_migration.total }}</td>
+    </tr>
+    <tr>
+      <td>Documents Successfully Exported</td>
+      <td>{{ data_migration.exported }}</td>
+    </tr>
+    <tr>
+      <td>Success Rate</td>
+      <td>{% if data_migration.total > 0 %}
+            {% if data_migration.errors == 0 %}
+              100.0%
+            {% else %}
+              {{ ((data_migration.total - data_migration.errors) / data_migration.total * 100)|round(2) }}%
+            {% endif %}
+          {% else %}
+            N/A
+          {% endif %}
+      </td>
+    </tr>
+    <tr>
+      <td>Batches Processed</td>
+      <td>{{ data_migration.batches }}</td>
+    </tr>
+    <tr>
+      <td>Errors Encountered</td>
+      <td>{{ data_migration.errors }}</td>
+    </tr>
+  </table>
+  
+  {% if data_migration.errors > 0 %}
+  <table>
+    <thead>
+      <tr>
+        <th colspan="1">Data Migration Errors</th>
+      </tr>
+    </thead>
+    <tr>
+      <th>Error Details</th>
+    </tr>
+    {% for error in data_migration.error_list %}
+    <tr>
+      <td>{{ error }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+</body>
+</html>
