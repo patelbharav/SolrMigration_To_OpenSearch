@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<schema>
-    <dynamicField name="*_txt" type="text_general" indexed="true" stored="true"/>
-    <dynamicField name="*_i" type="int" indexed="true" stored="true"/>
-    <dynamicField name="*_s" type="string" indexed="true" stored="true"/>
-    <dynamicField name="*_dt" type="date" indexed="true" stored="true"/>
-</schema>
