@@ -1,0 +1,9 @@
+{
+    "text_uax_default": {
+        "type": "uax_url_email"
+    },
+    "text_uax_custom": {
+        "type": "uax_url_email",
+        "max_token_length": 128
+    }
+}

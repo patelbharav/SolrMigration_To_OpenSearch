@@ -1,0 +1,90 @@
+{
+    "mappings": {
+        "properties": {
+            "_nest_path_": {
+                "type": "nested"
+            },
+            "_root_": {
+                "doc_values": false,
+                "index": true,
+                "store": false,
+                "type": "keyword"
+            },
+            "_version_": {
+                "index": false,
+                "store": false,
+                "type": "long"
+            },
+            "age": {
+                "index": true,
+                "store": true,
+                "type": "integer"
+            },
+            "comments": {
+                "type": "nested"
+            },
+            "coordinates_xy": {
+                "index": true,
+                "store": true,
+                "type": "xy_point"
+            },
+            "file_attachment": {
+                "index": false,
+                "store": true,
+                "type": "binary"
+            },
+            "geo_location": {
+                "index": true,
+                "store": true,
+                "type": "geo_point"
+            },
+            "id": {
+                "index": true,
+                "store": true,
+                "type": "keyword"
+            },
+            "last_modified": {
+                "index": true,
+                "store": true,
+                "type": "date"
+            },
+            "name": {
+                "copy_to": "text",
+                "index": true,
+                "store": true,
+                "type": "keyword"
+            },
+            "product_title_sortable": {
+                "index": true,
+                "store": true,
+                "type": "text"
+            },
+            "random_sort_token": {
+                "index": true,
+                "store": false,
+                "type": "integer"
+            },
+            "rating": {
+                "index": true,
+                "store": true,
+                "type": "integer"
+            },
+            "temperature": {
+                "index": true,
+                "store": true,
+                "type": "float"
+            },
+            "text": {
+                "index": true,
+                "store": true,
+                "type": "keyword"
+            },
+            "user_token": {
+                "index": false,
+                "store": true,
+                "type": "keyword"
+            }
+        }
+    }
+}
+

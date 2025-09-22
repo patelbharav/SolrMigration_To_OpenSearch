@@ -1,0 +1,12 @@
+{
+    "edge_ngram_default": {
+        "type": "edge_ngram",
+        "min_gram": 1,
+        "max_gram": 2
+    },
+    "edge_ngram_custom": {
+        "type": "edge_ngram",
+        "min_gram": 2,
+        "max_gram": 4
+    }
+}

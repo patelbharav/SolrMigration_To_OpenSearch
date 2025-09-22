@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="standard_default" class="solr.TextField">
+        <analyzer>
+            <tokenizer class="solr.StandardTokenizerFactory"/>
+        </analyzer>
+    </fieldType>
+
+    <fieldType name="standard_max_length" class="solr.TextField">
+        <analyzer>
+            <tokenizer class="solr.StandardTokenizerFactory" maxTokenLength="100"/>
+        </analyzer>
+    </fieldType>
+</schema>

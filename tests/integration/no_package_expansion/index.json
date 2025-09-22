@@ -1,0 +1,215 @@
+{
+    "mappings": {
+        "dynamic_templates": [
+            {
+                "*_text": {
+                    "mapping": {
+                        "analyzer": "text_general",
+                        "index": true,
+                        "store": true,
+                        "type": "text"
+                    },
+                    "match": "*_text"
+                }
+            }
+        ],
+        "properties": {
+            "_nest_path_": {
+                "type": "nested"
+            },
+            "_root_": {
+                "doc_values": false,
+                "index": true,
+                "store": false,
+                "type": "keyword"
+            },
+            "_version_": {
+                "index": false,
+                "store": false,
+                "type": "long"
+            },
+            "address": {
+                "analyzer": "text_general_index",
+                "copy_to": "text",
+                "index": true,
+                "search_analyzer": "text_general_query",
+                "store": true,
+                "type": "text"
+            },
+            "age": {
+                "index": true,
+                "store": true,
+                "type": "integer"
+            },
+            "city": {
+                "analyzer": "text_general_index",
+                "index": true,
+                "search_analyzer": "text_general_query",
+                "store": true,
+                "type": "text"
+            },
+            "comment": {
+                "analyzer": "text_general_index",
+                "index": true,
+                "search_analyzer": "text_general_query",
+                "store": true,
+                "type": "text"
+            },
+            "comments": {
+                "type": "nested"
+            },
+            "coordinates_xy": {
+                "index": true,
+                "store": true,
+                "type": "xy_point"
+            },
+            "file_attachment": {
+                "index": false,
+                "store": true,
+                "type": "binary"
+            },
+            "geo_location": {
+                "index": true,
+                "store": true,
+                "type": "geo_point"
+            },
+            "id": {
+                "index": true,
+                "store": true,
+                "type": "keyword"
+            },
+            "last_modified": {
+                "index": true,
+                "store": true,
+                "type": "date"
+            },
+            "name": {
+                "copy_to": "text",
+                "index": true,
+                "store": true,
+                "type": "keyword"
+            },
+            "product_title_sortable": {
+                "index": true,
+                "store": true,
+                "type": "text"
+            },
+            "random_sort_token": {
+                "index": true,
+                "store": false,
+                "type": "integer"
+            },
+            "rating": {
+                "index": true,
+                "store": true,
+                "type": "integer"
+            },
+            "temperature": {
+                "index": true,
+                "store": true,
+                "type": "float"
+            },
+            "text": {
+                "index": true,
+                "store": true,
+                "type": "keyword"
+            },
+            "user_token": {
+                "index": false,
+                "store": true,
+                "type": "keyword"
+            }
+        }
+    },
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "text_general_index": {
+                    "filter": [
+                        "synonymgraph35719085",
+                        "asciifolding92956345",
+                        "lowercase32841346",
+                        "stop49727075"
+                    ],
+                    "tokenizer": "standard81920306",
+                    "type": "custom"
+                },
+                "text_general_query": {
+                    "filter": [
+                        "synonymgraph35719085",
+                        "asciifolding92956345",
+                        "lowercase32841346",
+                        "stop49727075"
+                    ],
+                    "tokenizer": "standard81920306",
+                    "type": "custom"
+                }
+            },
+            "filter": {
+                "asciifolding92956345": {
+                    "preserve_original": "false",
+                    "type": "asciifolding"
+                },
+                "lowercase32841346": {
+                    "type": "lowercase"
+                },
+                "stop49727075": {
+                    "ignore_case": "true",
+                    "stopwords": [
+                        "a",
+                        "an",
+                        "and",
+                        "are",
+                        "as",
+                        "at",
+                        "be",
+                        "but",
+                        "by",
+                        "for",
+                        "if",
+                        "in",
+                        "into",
+                        "is",
+                        "it",
+                        "no",
+                        "not",
+                        "of",
+                        "on",
+                        "or",
+                        "such",
+                        "that",
+                        "the",
+                        "their",
+                        "then",
+                        "there",
+                        "these",
+                        "they",
+                        "this",
+                        "to",
+                        "was",
+                        "will",
+                        "with"
+                    ],
+                    "type": "stop"
+                },
+                "synonymgraph35719085": {
+                    "expand": true,
+                    "lenient": true,
+                    "synonyms": [
+                        "usa, united states, america",
+                        "car, automobile, vehicle",
+                        "tv, television",
+                        "ny, new york"
+                    ],
+                    "type": "synonym"
+                }
+            },
+            "tokenizer": {
+                "standard81920306": {
+                    "max_token_length": 255,
+                    "type": "standard"
+                }
+            }
+        }
+    }
+}

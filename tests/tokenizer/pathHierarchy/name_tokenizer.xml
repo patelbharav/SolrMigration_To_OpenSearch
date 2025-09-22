@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="path_hierarchy_default" class="solr.TextField">
+        <analyzer>
+            <tokenizer name="pathHierarchy"/>
+        </analyzer>
+    </fieldType>
+
+    <fieldType name="path_hierarchy_custom_delimiters" class="solr.TextField">
+        <analyzer>
+            <tokenizer name="pathHierarchy" delimiter="|" replace=">"/>
+        </analyzer>
+    </fieldType>
+
+    <fieldType name="path_hierarchy_full_custom" class="solr.TextField">
+        <analyzer>
+            <tokenizer name="pathHierarchy" 
+                      delimiter="|" 
+                      replace=">" 
+                      reverse="true" 
+                      skip="2" 
+                      delimiter_output="$"/>
+        </analyzer>
+    </fieldType>
+</schema>

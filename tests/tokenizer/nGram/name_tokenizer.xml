@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="ngram_default" class="solr.TextField">
+        <analyzer>
+            <tokenizer name="nGram"/>
+        </analyzer>
+    </fieldType>
+
+    <fieldType name="ngram_custom" class="solr.TextField">
+        <analyzer>
+            <tokenizer name="nGram" minGramSize="2" maxGramSize="4"/>
+        </analyzer>
+    </fieldType>
+</schema>

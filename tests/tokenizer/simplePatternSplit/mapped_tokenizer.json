@@ -1,0 +1,6 @@
+{
+    "simple_pattern_split_basic": {
+        "type": "simple_pattern_split",
+        "pattern": "[,\\s]+"
+    }
+}

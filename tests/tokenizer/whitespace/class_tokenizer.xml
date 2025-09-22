@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="whitespace_default" class="solr.TextField">
+        <analyzer>
+            <tokenizer class="solr.WhitespaceTokenizerFactory"/>
+        </analyzer>
+    </fieldType>
+</schema>

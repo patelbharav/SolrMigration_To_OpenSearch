@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="edge_ngram_default" class="solr.TextField">
+        <analyzer>
+            <tokenizer name="edgeNGram"/>
+        </analyzer>
+    </fieldType>
+
+    <fieldType name="edge_ngram_custom" class="solr.TextField">
+        <analyzer>
+            <tokenizer name="edgeNGram" 
+                      minGramSize="2" 
+                      maxGramSize="4"/>
+        </analyzer>
+    </fieldType>
+</schema>

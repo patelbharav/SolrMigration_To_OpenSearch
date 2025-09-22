@@ -1,0 +1,6 @@
+{
+    "simple_pattern_basic": {
+        "type": "simple_pattern",
+        "pattern": "[0-9]+"
+    }
+}

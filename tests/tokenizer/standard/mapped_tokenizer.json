@@ -1,0 +1,10 @@
+{
+    "standard_default": {
+        "type": "standard",
+        "max_token_length": 255
+    },
+    "standard_max_length": {
+        "type": "standard",
+        "max_token_length": 100
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "path_hierarchy_default": {
+        "type": "path_hierarchy",
+        "delimiter": "/",
+        "replace": "/",
+        "buffer_size": 1024,
+        "reverse": false,
+        "skip": 0
+    },
+    "path_hierarchy_custom_delimiters": {    
+        "type": "path_hierarchy",
+        "delimiter": "|",
+        "replace": ">",
+        "buffer_size": 1024,
+        "reverse": false,
+        "skip": 0
+    },
+    "path_hierarchy_full_custom": {          
+        "type": "path_hierarchy",
+        "delimiter": "|",
+        "replace": ">",
+        "buffer_size": 1024,
+        "reverse": true,
+        "skip": 2
+    }
+}

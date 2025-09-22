@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="pattern_custom" class="solr.TextField">
+        <analyzer>
+            <tokenizer class="solr.PatternTokenizerFactory" pattern="[,\s]+"/>
+        </analyzer>
+    </fieldType>
+
+    <fieldType name="pattern_with_group" class="solr.TextField">
+        <analyzer>
+            <tokenizer class="solr.PatternTokenizerFactory" 
+                      pattern="([^,\s]+),([^,\s]+)" 
+                      group="2"/>
+        </analyzer>
+    </fieldType>
+</schema>

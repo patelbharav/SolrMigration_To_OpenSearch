@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema>
+    <fieldType name="simple_pattern_basic" class="solr.TextField">
+        <analyzer>
+            <tokenizer class="solr.SimplePatternTokenizerFactory" pattern="[0-9]+"/>
+        </analyzer>
+    </fieldType>
+</schema>

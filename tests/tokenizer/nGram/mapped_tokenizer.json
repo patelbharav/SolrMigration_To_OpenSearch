@@ -1,0 +1,12 @@
+{
+    "ngram_default": {
+        "type": "ngram",
+        "min_gram": 1,
+        "max_gram": 2
+    },
+    "ngram_custom": {
+        "type": "ngram",
+        "min_gram": 2,
+        "max_gram": 4
+    }
+}

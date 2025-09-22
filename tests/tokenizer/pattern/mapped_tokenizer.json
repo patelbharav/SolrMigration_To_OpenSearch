@@ -1,0 +1,11 @@
+{
+    "pattern_custom": {
+        "type": "pattern",
+        "pattern": "[,\\s]+"
+    },
+    "pattern_with_group": {
+        "type": "pattern",
+        "pattern": "([^,\\s]+),([^,\\s]+)",
+        "group": 2
+    }
+}

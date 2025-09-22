@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema name="ckan-2.11" version="1.6">
+    <fieldType name="text_uax_default" class="solr.TextField">
+        <analyzer>
+            <tokenizer name="uax29URLEmail"/>
+        </analyzer>
+    </fieldType>
+    <fieldType name="text_uax_custom" class="solr.TextField">
+        <analyzer>
+            <tokenizer name="uax29URLEmail" maxTokenLength="128"/>
+        </analyzer>
+    </fieldType>
+</schema>
