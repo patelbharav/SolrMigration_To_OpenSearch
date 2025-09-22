@@ -1,0 +1,4 @@
+usa, united states, america
+car, automobile, vehicle
+tv, television
+ny, new york

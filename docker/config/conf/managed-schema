@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema name="default-config" version="1.6">
+
+    <field name="_version_" type="plong" indexed="false" stored="false"/>
+    <field name="_root_" type="string" indexed="true" stored="false" docValues="false"/>
+
+
+    <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false"/>
+    <field name="name" type="string" indexed="true" stored="true" multiValued="true"/>
+    <field name="address" type="text_general" indexed="true" stored="true"/>
+    <field name="user_token" type="string" indexed="false" stored="true"/>
+    <field name="age" type="pint" indexed="true" stored="true"/>
+    <field name="last_modified" type="pdate" indexed="true" stored="true"/>
+    <field name="city" type="text_general" indexed="true" stored="true"/>
+    <field name="text" type="text_general" indexed="true" stored="false" multiValued="true"/>
+    <field name="_nest_path_" type="nested" />
+    <field name="comments" type="nested" indexed="true" stored="true"/>
+
+    <field name="comment" type="text_general" indexed="true" stored="true"/>
+    <field name="rating" type="pint" indexed="true" stored="true"/>
+    <field name="coordinates_xy" type="xy_point" indexed="true" stored="true"/>
+    <field name="random_sort_token" type="random_sort" indexed="true" stored="false"/>
+    <field name="product_title_sortable" type="sortable_text" indexed="true" stored="true"/>
+    <field name="file_attachment" type="binary" indexed="false" stored="true"/>
+    <field name="geo_location" type="geo_point" indexed="true" stored="true"/>
+    <field name="temperature" type="pfloat" indexed="true" stored="true"/>
+
+    <!-- Primary key -->
+    <uniqueKey>id</uniqueKey>
+
+    <!-- Field copy rules -->
+    <copyField source="name" dest="text"/>
+    <copyField source="address" dest="text"/>
+
+
+
+    <!-- Field types -->
+    <fieldType name="string" class="solr.StrField" sortMissingLast="true"/>
+    <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
+    <fieldType name="booleans" class="solr.BoolField" sortMissingLast="true" multiValued="true"/>
+    <fieldType name="pint" class="solr.IntPointField" docValues="true"/>
+    <fieldType name="plong" class="solr.LongPointField" docValues="true"/>
+    <fieldType name="plongs" class="solr.LongPointField" docValues="true" multiValued="true"/>
+    <fieldType name="pdouble" class="solr.DoublePointField" docValues="true"/>
+    <fieldType name="pdoubles" class="solr.DoublePointField" docValues="true" multiValued="true"/>
+    <fieldType name="pdate" class="solr.DatePointField" docValues="true"/>
+    <fieldType name="pdates" class="solr.DatePointField" docValues="true" multiValued="true"/>
+    <fieldType name="pfloat" class="solr.FloatPointField" docValues="true"/>
+    <fieldType name="pfloats" class="solr.FloatPointField" docValues="true" multiValued="true"/>
+
+    <!-- Updated full-text field with stopwords and synonyms -->
+    <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
+        <analyzer type="index">
+            <tokenizer class="solr.StandardTokenizerFactory"/>
+            <filter class="solr.SynonymGraphFilterFactory" synonyms="synonyms.txt" expand="true" ignoreCase="true"/>
+            <filter class="solr.ASCIIFoldingFilterFactory" preserveOriginal="false"/>
+            <filter class="solr.LowerCaseFilterFactory"/>
+            <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
+        </analyzer>
+        <analyzer type="query">
+            <tokenizer class="solr.StandardTokenizerFactory"/>
+            <filter class="solr.SynonymGraphFilterFactory" synonyms="synonyms.txt" expand="true" ignoreCase="true"/>
+            <filter class="solr.ASCIIFoldingFilterFactory" preserveOriginal="false"/>
+            <filter class="solr.LowerCaseFilterFactory"/>
+            <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
+        </analyzer>
+    </fieldType>
+
+
+    <fieldType name="nested" class="solr.NestPathField"/>
+    <fieldType name="xy_point" class="solr.PointType" dimension="2" subFieldType="pdouble"/>
+    <fieldType name="random_sort" class="solr.RandomSortField"/>
+    <fieldType name="sortable_text" class="solr.SortableTextField" omitNorms="true" sortMissingLast="true"/>
+    <fieldType name="binary" class="solr.BinaryField"/>
+    <fieldType name="geo_point" class="solr.LatLonPointSpatialField" docValues="true"/>
+
+    <dynamicField name="*_text" type="text_general" indexed="true"  stored="true"/>
+
+
+</schema>

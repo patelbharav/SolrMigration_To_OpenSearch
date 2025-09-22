@@ -1,0 +1,159 @@
+[
+  {
+    "id": "1",
+    "name": ["Product 1"],
+    "address": "123 Main St, City A",
+
+    "age": 25,
+    "last_modified": "2023-06-01T10:00:00Z",
+    "city": "City A",
+
+    "comments": [
+      {"id": "1/c1", "comment": "Great product!", "rating": 5}
+    ],
+    "coordinates_xy": "37.7749,122.4194",
+    "product_title_sortable": "Product 1 - Premium",
+    "file_attachment": "UGFja2FnZSBkZXRhaWxzIGZvciBwcm9kdWN0IDE=",
+    "geo_location": "37.7749,122.4194",
+    "temperature": 22.5
+  },
+  {
+    "id": "2",
+    "name": ["Product 2", "Alternative Name"],
+    "address": "456 Oak St, City B",
+
+    "age": 30,
+    "last_modified": "2023-06-02T11:00:00Z",
+    "city": "City B",
+
+    "comments": [
+      {"id": "2/c1", "comment": "Good value", "rating": 4}
+    ],
+    "coordinates_xy": "34.0522,118.2437",
+    "product_title_sortable": "Product 2 - Standard",
+    "file_attachment": "UGFja2FnZSBkZXRhaWxzIGZvciBwcm9kdWN0IDI=",
+    "geo_location": "34.0522,118.2437",
+    "temperature": 25.8
+  },
+  {
+    "id": "3",
+    "name": ["Product 3"],
+    "address": "789 Pine St, City C",
+
+    "age": 35,
+    "last_modified": "2023-06-03T12:00:00Z",
+    "city": "City C",
+    "comments": [
+      {"id": "3/c1", "comment": "Excellent quality", "rating": 5}
+    ],
+    "coordinates_xy": "40.7128,74.0060",
+    "product_title_sortable": "Product 3 - Deluxe",
+    "file_attachment": "UGFja2FnZSBkZXRhaWxzIGZvciBwcm9kdWN0IDM=",
+    "geo_location": "40.7128,74.0060",
+    "temperature": 18.3
+  },
+  {
+    "id": "4",
+    "name": ["Product 4", "Special Edition"],
+    "address": "101 Elm St, City D",
+
+    "age": 40,
+    "last_modified": "2023-06-04T13:00:00Z",
+    "city": "City D",
+
+    "coordinates_xy": "41.8781,87.6298",
+    "product_title_sortable": "Product 4 - Limited",
+    "file_attachment": "UGFja2FnZSBkZXRhaWxzIGZvciBwcm9kdWN0IDQ=",
+    "geo_location": "41.8781,87.6298",
+    "temperature": 21.2
+  },
+  {
+    "id": "5",
+    "name": ["Product 5"],
+    "address": "202 Cedar St, City E",
+
+    "age": 45,
+    "last_modified": "2023-06-05T14:00:00Z",
+    "city": "City E",
+
+    "coordinates_xy": "51.5074,0.1278",
+    "product_title_sortable": "Product 5 - Basic",
+    "file_attachment": "UGFja2FnZSBkZXRhaWxzIGZvciBwcm9kdWN0IDU=",
+    "geo_location": "51.5074,0.1278",
+    "temperature": 16.7
+  },
+  {
+    "id": "6",
+    "name": ["Product 6", "Pro Version"],
+    "address": "303 Maple St, City F",
+
+    "age": 50,
+    "last_modified": "2023-06-06T15:00:00Z",
+    "city": "City F",
+
+    "coordinates_xy": "48.8566,2.3522",
+    "product_title_sortable": "Product 6 - Professional",
+    "file_attachment": "UGFja2FnZSBkZXRhaWxzIGZvciBwcm9kdWN0IDY=",
+    "geo_location": "48.8566,2.3522",
+    "temperature": 19.5
+  },
+  {
+    "id": "7",
+    "name": ["Product 7"],
+    "address": "404 Birch St, City G",
+
+    "age": 55,
+    "last_modified": "2023-06-07T16:00:00Z",
+    "city": "City G",
+
+    "coordinates_xy": "35.6762,139.6503",
+    "product_title_sortable": "Product 7 - Economy",
+    "file_attachment": "UGFja2FnZSBkZXRhaWxzIGZvciBwcm9kdWN0IDc=",
+    "geo_location": "35.6762,139.6503",
+    "temperature": 23.1
+  },
+  {
+    "id": "8",
+    "name": ["Product 8", "Enterprise Edition"],
+    "address": "505 Walnut St, City H",
+
+    "age": 60,
+    "last_modified": "2023-06-08T17:00:00Z",
+    "city": "City H",
+
+    "coordinates_xy": "55.7558,37.6173",
+    "product_title_sortable": "Product 8 - Enterprise",
+    "file_attachment": "UGFja2FnZSBkZXRhaWxzIGZvciBwcm9kdWN0IDg=",
+    "geo_location": "55.7558,37.6173",
+    "temperature": 15.9
+  },
+  {
+    "id": "9",
+    "name": ["Product 9"],
+    "address": "606 Cherry St, City I",
+
+    "age": 65,
+    "last_modified": "2023-06-09T18:00:00Z",
+    "city": "City I",
+
+    "coordinates_xy": "52.5200,13.4050",
+    "product_title_sortable": "Product 9 - Premium Plus",
+    "file_attachment": "UGFja2FnZSBkZXRhaWxzIGZvciBwcm9kdWN0IDk=",
+    "geo_location": "52.5200,13.4050",
+    "temperature": 17.4
+  },
+  {
+    "id": "10",
+    "name": ["Product 10", "Ultimate Edition"],
+    "address": "707 Ash St, City J",
+
+    "age": 70,
+    "last_modified": "2023-06-10T19:00:00Z",
+    "city": "City J",
+    "coordinates_xy": "33.8688,151.2093",
+    "product_title_sortable": "Product 10 - Ultimate",
+    "file_attachment": "UGFja2FnZSBkZXRhaWxzIGZvciBwcm9kdWN0IDEw",
+    "geo_location": "33.8688,151.2093",
+    "temperature": 24.6
+  }
+]
