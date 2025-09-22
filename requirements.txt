@@ -1,0 +1,11 @@
+boto3
+toml
+opensearch-py
+pysolr
+Jinja2
+coloredlogs
+requests_aws4auth
+requests
+xmltodict
+testcontainers
+pytest

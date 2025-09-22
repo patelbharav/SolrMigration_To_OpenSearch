@@ -1,0 +1,36 @@
+[solr]
+host="http://<solr-host>"
+port=8983
+username='<username>'
+password='<password>'
+collection="<solr collection_name>"
+
+[opensearch]
+domain="<opensearch domain_name>"
+bucket="<s3 bucket name>"
+host="<opensearch host>"
+port=443
+region="<aws-region>"
+use_aws_auth_sigv4=false
+username='<opensearch username>'
+password='<opensearch password>'
+index="<opensearch index_name>"
+use_ssl=true
+assert_hostname=false
+verify_certs=true
+
+
+[migration]
+create_package=true
+expand_files_array=false
+create_index=false
+migrate_schema=true
+
+[data_migration]
+migrate_data=false
+s3_export_bucket="<s3 bucket name>"
+s3_export_prefix="migration_data/"
+region="us-east-1"
+batch_size=1000
+rows_per_page=500
+max_rows=100000
